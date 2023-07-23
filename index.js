@@ -24,7 +24,7 @@ const client = new MongoClient(uri, {
   async function run() {
     try {
       // Connect the client to the server	(optional starting in v4.7)
-      await client.connect(); // Remove or comment-out this line before deployment.
+      // await client.connect();
 
       const userCollection = client.db("campusReserve").collection("users");
 
