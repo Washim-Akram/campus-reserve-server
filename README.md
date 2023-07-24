@@ -6,7 +6,7 @@ Hosted in Firebase ->
 
 ## Live Server Link:
 
-Hosted in Vercel ->
+Hosted in Vercel -> https://campus-reserve.vercel.app
 
 ## Packages & Technologies:
 

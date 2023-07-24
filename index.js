@@ -27,6 +27,7 @@ const client = new MongoClient(uri, {
       // await client.connect();
 
       const userCollection = client.db("campusReserve").collection("users");
+      const classCollection = client.db("campusReserve").collection("classes");
 
     // Users Related API's
      app.get('/users', async(req, res) => {
@@ -46,6 +47,12 @@ const client = new MongoClient(uri, {
         const result = await userCollection.insertOne(user);
         res.send(result);
       });
+
+      // Classes Related API's
+     app.get('/classes', async(req, res) => {
+      const result = await classCollection.find().toArray();
+      res.send(result);
+    });
 
       // Send a ping to confirm a successful connection
       await client.db("admin").command({ ping: 1 });
